@@ -1,0 +1,24 @@
+    1  ls
+    2  cd tmp
+    3  ls
+    4  touch main.c
+    5  whoami
+    6  showhostname
+    7  hostname
+    8  man whoami
+    9  man whoami
+   10  whoami
+   11  man man
+   12  $man man
+   13  man --help
+   14  man whoami
+   15  cd ./
+   16  man whoami
+   17  whoami
+   18  man man
+   19  maaaaaaaaaaaaaaaaaaaaaaaaaaan
+   20  tail
+   21  man
+   22  whoami -h
+   23  whoami --help
+   24  history> ex2.txt
