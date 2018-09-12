@@ -11,8 +11,7 @@ int main(void) {
     int i=0;
     while (i==0) {
         printf("> $"); // the beginning of a line in  cmd_prompt ui
-        scanf("%s", cmd_set);; // reading the input cmd
-		fork();
+        fgets(cmd_set, sizeof(cmd_set), stdin) // reading the input cmd
         system(cmd_set); // passing the string to terminal, getting the res into the console
     }
     return 0;
