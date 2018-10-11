@@ -1,0 +1,7 @@
+16-bit virtual addresses -> 2^16 = 65536 
+
+Each page is 8 KB = 8 * 1024 B
+
+65536  / (8 * 1024) = 8 pages in system
+
+Each page needs one record in table -> 8 records

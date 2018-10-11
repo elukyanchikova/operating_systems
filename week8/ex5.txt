@@ -1,0 +1,8 @@
+Physical address is an address in physical memory that implemented in hardware.
+Virtual address is an address in virtual memory that is an abstraction.
+
+There can be more virtual addresses than physical addresses. Virtual  memory maps to the physical memory(mapping can be changed by OS)
+Virtual addresses might be not mapped to anywhere( if we try to refer to unmapped address -> trap == page fault -> os swap the required address with one less-used, remap and restart)
+
+It's quicklier to access by physical address.
+
