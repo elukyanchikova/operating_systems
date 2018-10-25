@@ -1,0 +1,5 @@
+-rw-rw-rw- 1 ekl users 0 окт 25 23:23 _ex3.txt
+-rwxrw-rwx 1 ekl users 0 окт 25 23:23 _ex3.txt
+-rw-rw---- 1 ekl users 0 окт 25 23:23 _ex3.txt
+-rwxrwxr-x 1 ekl users 0 окт 25 23:23 _ex3.txt
+-rwxrwxrwx 1 ekl users 0 окт 25 23:23 _ex3.txt
