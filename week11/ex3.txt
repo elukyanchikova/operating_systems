@@ -1,0 +1,11 @@
+The diffirence in th outputs is explained by line buffering.
+
+It works in the following way: when use standard output, all the strings to be outputed are collected by a buffer at first. The're outputted only when the buffer is full, the program execution is ended or the process found "\n" while scanning the string.
+
+fork() creates the duplicate child proces that copies the buffer its parent process has.
+
+Hence, in first case, we buffer "Hello", than fork and create a child process that has in its buffer "Hello" for now. The the parent process scan "\n" and output its buffer. The child process copies that "\n" and output its buffer with \n in the end.
+(as a result, we get Hello, "\n"(next line), Hello, "\n"(next line)).
+
+In the second case, we buffer "Hello", than have "\n", so the buffer outputs what was it it. Then the process forks and the child process get the same empty buffer as its parent. Then parent process meets "\n" and buffer it, immediately output after. The child process get '\n' in its buffer and immideately output it also.
+(as a result we get Hello, '\n'(next line), '\n' (next line))
