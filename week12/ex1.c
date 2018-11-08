@@ -4,7 +4,7 @@
 #include <unistd.h>
 
 int main() {
-    int f = open("ex1.txt", O_RDONLY);
+    int f = open("ex1.txt", O_RDWR);
     if (f == -1) {
         printf("Error");
     } else {
