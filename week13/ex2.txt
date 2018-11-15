@@ -1,0 +1,24 @@
+There are 3 strateges to deal with a deadlosk:
+  1) Recovery from a deadlock
+    a) preemption
+       Used when it is possible to temporarily take a resource away from its current owner and give it to another process (in many cases manual interruption is required).
+       Recovery is difficult or even impossible.
+       Example: to stop pronter the opertor can take all the printed papers away and suspend the process. Then give the printer to another process. When it is done, bring the printed by 1st process papers back and restart original process.
+    b) rollback
+       Used when system developers and machine operators knows that there is a chance of deadlock appearance. Then they make processes mark checkpoints periodicly.
+       A checkpoint contains memory image, resources state. 
+       When a deadlock appears, the process owning the required resource roll back to the ckeckpoint before the process got the resource. All thw work done after the checkpoint is lost.
+    c) killing processes
+      The most rude approach, but still the most simple.
+      The process to be killed can be chosen as follows:
+        1) any process in a cycle of deadlock. If we are lucky, other processes will be able to continue the work. 
+          If this does not help, we can contionue untill break the cycle.
+        2) resource out of the cycle to free the required resorces it holds. The killed process should be chosen very careful.
+        Example: process 1 holds a printer, requires a printer, process 2 vise versa. A third  process has both. Killing the third one will let  1st and 2nd work and the return resorces to the third.
+        Better to kill the process that can be recovered without problems(like compilation).    
+  2) Avoidance of a deadlock
+        Deadlock an be avoided, but this requires knowing information in advance(not convinient - knowing about the future requests is almost impossible): "the system must be able to decide whether granting a resource is safe or not and make the allocation only when it is safe
+        (safe state - there is a scheduling order in which every process can complete running successfullt even in case if every of them at one time request the max number of resources.
+  3) Prevention of a deadlock
+        The approach try to break one of 4 conditions when deadlock appears( to pevent: mutual exclusion - spooling; hold-and-wait - request all resources initially; non-preemption - way to take resources away from the process; circular wait - give a number for each resource).
+        If we guarantee that at least one of this conditions will never happen, then deadlocks are structurally impossible.
